@@ -1,0 +1,120 @@
+public static void main(String[] args) {
+
+Conta c3 = new Conta();         
+          c3.limite = 100000; 
+          Cliente Rodrigo = new Cliente();
+          Rodrigo.nome = "Rodrigo";
+          Rodrigo.sobrenome = "Nascimento";
+          Rodrigo.cpf = "111";
+          c3.titular = Rodrigo;
+          c3.saldo = 80000;
+                
+         Conta c4 = new Conta();         
+          c4.limite = 75000; 
+          Cliente Ana = new Cliente();
+          Ana.nome = "Ana";
+          Ana.sobrenome = "AAA";
+          Ana.cpf = "000";
+          c4.titular = Ana;
+          c4.numero = 1515;
+          c4.saldo = 40000;
+            
+            System.out.println("");
+            System.out.println("Saldo de "+c3.titular.nome+":"+c3.saldo);
+            System.out.println("Saldo de "+c4.titular.nome+":"+c4.saldo);
+          
+            c3.transfere(1000, c4);
+            
+            System.out.println("");
+            System.out.println("Depois da transferência:");
+            System.out.println("Saldo de "+c3.titular.nome+":"+c3.saldo);
+            System.out.println("Saldo de "+c4.titular.nome+":"+c4.saldo);
+          }
+    }
+            
+            
+            
+            
+            //        Conta c1 = new Conta();
+//        c1.limite = 100000;
+//        c1.nome = "Rodrigo";
+//        c1.numero = 1540;
+//        c1.saldo = 50000;
+//        
+//        System.out.println("Antigo saldo:");
+//        System.out.println("Titular da conta: "+ c1.nome);
+//        System.out.println("Saldo: "+ c1.saldo);
+//        
+//        c1.deposita(25000);
+//        
+//        System.out.println("Novo saldo:");
+//        System.out.println("Titular da conta: "+ c1.nome);
+//        System.out.println("Saldo: "+ c1.saldo);
+//        
+//        c1.saca(250);
+//        
+//        System.out.println("Saldo depois de sacar:");
+//        System.out.println("Titular da conta: "+ c1.nome);
+//        System.out.println("Saldo: "+ c1.saldo);
+//    }
+// }
+
+//        Scanner L = new Scanner(System.in);
+//
+//          Conta c2 = new Conta();
+//          c2.limite = 75000;          
+//          c2.numero = 0;
+//          c2.saldo = 50000;
+//          
+//        System.out.println("Digite o nome do titular: ");
+//        c2.nome = L.nextLine();  
+//          
+//        System.out.println("Digite o número da conta: ");
+//        c2.numero = L.nextInt();
+//        
+//        System.out.println("================================");        
+//        System.out.println("O saldo da conta é: "+c2.saldo);        
+//        System.out.println("================================");
+//        
+//        System.out.println("O que deseja?");
+//        System.out.println("1. Sacar");
+//        System.out.println("2. Depositar");
+//        
+//         int N = L.nextInt();
+//        
+//            switch(N){
+//             case 1:
+//                 
+//                System.out.println("Digite a quantidade que quer sacar: ");
+//                N = L.nextInt();
+//                
+//                if(!c2.saca(N)){
+//                    System.out.println("Não foi possivel sacar.");             
+//                break;
+//                }  
+//                else{
+//                 System.out.println("================================");
+//                 System.out.println("Titular da conta: "+c2.nome); 
+//                 System.out.println("Número da conta: "+c2.numero);
+//                 System.out.println("Saldo atual da conta: "+c2.saldo);
+//                 System.out.println("================================");
+//                }
+//             case 2:
+//                 
+//                System.out.println("Digite a quantidade que quer depositar: ");
+//                N = L.nextInt(); 
+//                
+//                c2.deposita(N);
+//                 System.out.println("================================");
+//                 System.out.println("Titular da conta: "+c2.nome); 
+//                 System.out.println("Número da conta: "+c2.numero);
+//                 System.out.println("Saldo atual da conta: "+c2.saldo);
+//                 System.out.println("================================");
+//                break;
+//                
+//                
+//             default:
+//                 System.out.println("Número inválido.");
+//            }
+//        }
+//  }
