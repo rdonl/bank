@@ -1,0 +1,35 @@
+public class Conta {
+    //Atributos
+    
+    int numero;
+    Cliente titular;
+    double saldo;
+    double limite;  
+    //Métodos 
+    
+        void deposita (double quantidade){
+            this.saldo += quantidade;
+        }
+    
+//         void saca (double quantidade){
+//            this.saldo -= quantidade;
+        
+        boolean saca(double quantidade){
+            if(quantidade > this.saldo){
+                return false;
+                
+            }else{
+                this.saldo-=quantidade;
+                return true;
+            }
+     }
+
+        void transfere(double quantidade, Conta destino){
+           if(this.saca(quantidade)){
+               destino.deposita(quantidade);
+               System.out.println("Transferido para " + destino.titular.nome);
+           }else{
+               System.out.println("Não tem saldo suficiente.");
+           }
+        }
+}
